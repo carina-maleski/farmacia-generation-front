@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="w-full bg-red-900 text-white flex justify-center">
+    <div className="w-full bg-red-900 text-white flex justify-center p-8">
       <div className="container items-center flex text-lg justify-between">
         <Link to="/home" className="text-2xl font-bold uppercase">
           F71
@@ -13,9 +13,6 @@ function Navbar() {
           </Link>
           <Link to="/categorias" className="hover:underline">
             Categorias
-          </Link>
-          <Link to="/cadastroCategoria" className="hover:underline">
-            Cadastrar Categoria
           </Link>
         </div>
       </div>
