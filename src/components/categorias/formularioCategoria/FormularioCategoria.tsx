@@ -76,7 +76,7 @@ function FormularioCategoria() {
           />
         </div>
         <button
-          className="rounded-full hover:text-stone-100 bg-cyan-500/50 hover:bg-cyan-800/90 w-1/2 py-2 mx-auto block"
+          className="rounded-full hover:text-white bg-cyan-500/50 hover:bg-cyan-800/90 w-1/2 py-2 mx-auto block"
           type="submit"
         >
           {id === undefined ? "Cadastrar" : "Editar"}

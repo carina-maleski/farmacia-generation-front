@@ -5,6 +5,7 @@ import CardCategorias from "../cardCategorias/CardCategorias";
 import Categoria from "../../../models/Categoria";
 import { buscar } from "../../../services/Service";
 import { Triangle } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -35,13 +36,21 @@ function ListaCategorias() {
       )}
 
       <div className="flex justify-center w-full my-4">
-        <div className="container flex flex-col">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
             {categorias.map((categoria) => (
               <>
                 <CardCategorias key={categoria.id} categoria={categoria} />
               </>
             ))}
+          </div>
+          <div className="flex items-center justify-center">
+            <Link
+              to="/cadastroCategoria"
+              className="rounded-full font-bold bg-cyan-500/50 hover:bg-cyan-800/90 px-8 py-4 hover:text-white"
+            >
+              Cadastrar Nova Categoria
+            </Link>
           </div>
         </div>
       </div>
